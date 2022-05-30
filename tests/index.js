@@ -9,6 +9,7 @@ const path = require('path');
 const plugin = require('..');
 
 const ruleFiles = fs.readdirSync(path.resolve(__dirname, '../lib/rules/')).map((f) => path.basename(f, '.js'));
+const ruleTestFiles = fs.readdirSync(path.resolve(__dirname, './lib/rules/')).map((f) => path.basename(f, '.js'));
 
 describe('all rule files should be exported by the plugin', () => {
   ruleFiles.forEach((ruleName) => {
@@ -16,6 +17,25 @@ describe('all rule files should be exported by the plugin', () => {
       assert.equal(plugin.rules[ruleName], require(path.join('../lib/rules', ruleName))); // eslint-disable-line global-require, import/no-dynamic-require
     });
   });
+});
+
+describe('all rule files should have a corresponding test', () => {
+  const rules = [];
+  const rulesWithoutTests = [];
+
+  ruleFiles.forEach((ruleName) => {
+    rules.push(ruleName);
+    // it(`should export ${ruleName}`, () => {
+    //   assert.equal(plugin.rules[ruleName], require(path.join('../lib/rules', ruleName))); // eslint-disable-line global-require, import/no-dynamic-require
+    // });
+  });
+
+  ruleTestFiles.forEach((ruleName) => {
+    if (rules.includes(ruleName)) return;
+    rulesWithoutTests.push(ruleName);
+  });
+
+  assert.deepEqual(rulesWithoutTests, []);
 });
 
 describe('deprecated rules', () => {

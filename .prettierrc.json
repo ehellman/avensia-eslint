@@ -3,11 +3,11 @@
   "bracketSpacing": true,
   "cursorOffset": -1,
   "embeddedLanguageFormatting": "auto",
-  "endOfLine": "lf",
+  "endOfLine": "crlf",
   "singleQuote": true,
   "semi": true,
   "useTabs": false,
   "tabWidth": 2,
-  "trailingComma": "all",
+  "trailingComma": "es5",
   "printWidth": 180
 }

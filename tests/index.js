@@ -25,9 +25,6 @@ describe('all rule files should have a corresponding test', () => {
 
   ruleFiles.forEach((ruleName) => {
     rules.push(ruleName);
-    // it(`should export ${ruleName}`, () => {
-    //   assert.equal(plugin.rules[ruleName], require(path.join('../lib/rules', ruleName))); // eslint-disable-line global-require, import/no-dynamic-require
-    // });
   });
 
   ruleTestFiles.forEach((ruleName) => {

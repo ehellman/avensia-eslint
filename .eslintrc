@@ -1,6 +1,6 @@
 {
     "root": true,
-    "extends": ["airbnb-base", "plugin:eslint-plugin/recommended"],
+    "extends": ["airbnb-base", "plugin:eslint-plugin/recommended", "prettier"],
     "plugins": ["eslint-plugin"],
     "env": {
        "es6": true,

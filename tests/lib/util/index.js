@@ -40,14 +40,8 @@ describe('matchCommentTokenFormatting', () => {
 
     const lineCommentExpectation = `// ${comment}`;
     const blockCommentExpectation = `/* ${comment} */`;
-    assert.equal(
-      matchCommentTokenFormatting(comment, lineCommentToken),
-      lineCommentExpectation
-    );
-    assert.equal(
-      matchCommentTokenFormatting(comment, blockCommentToken),
-      blockCommentExpectation
-    );
+    assert.equal(matchCommentTokenFormatting(comment, lineCommentToken), lineCommentExpectation);
+    assert.equal(matchCommentTokenFormatting(comment, blockCommentToken), blockCommentExpectation);
   });
 
   it('should return a Line comment as default', () => {
@@ -57,10 +51,7 @@ describe('matchCommentTokenFormatting', () => {
 
     const expectation = `// ${comment}`;
 
-    assert.equal(
-      matchCommentTokenFormatting(comment, specialCommentToken),
-      expectation
-    );
+    assert.equal(matchCommentTokenFormatting(comment, specialCommentToken), expectation);
   });
 
   it('should add a new line at the end of the comment when prompted', () => {
@@ -70,9 +61,6 @@ describe('matchCommentTokenFormatting', () => {
 
     const expectation = `// ${comment}\n`;
 
-    assert.equal(
-      matchCommentTokenFormatting(comment, lineCommentToken, true),
-      expectation
-    );
+    assert.equal(matchCommentTokenFormatting(comment, lineCommentToken, true), expectation);
   });
 });

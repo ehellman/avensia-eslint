@@ -8,17 +8,12 @@ const path = require('path');
 
 const plugin = require('..');
 
-const ruleFiles = fs
-  .readdirSync(path.resolve(__dirname, '../lib/rules/'))
-  .map((f) => path.basename(f, '.js'));
+const ruleFiles = fs.readdirSync(path.resolve(__dirname, '../lib/rules/')).map((f) => path.basename(f, '.js'));
 
 describe('all rule files should be exported by the plugin', () => {
   ruleFiles.forEach((ruleName) => {
     it(`should export ${ruleName}`, () => {
-      assert.equal(
-        plugin.rules[ruleName],
-        require(path.join('../lib/rules', ruleName)) // eslint-disable-line global-require, import/no-dynamic-require
-      );
+      assert.equal(plugin.rules[ruleName], require(path.join('../lib/rules', ruleName))); // eslint-disable-line global-require, import/no-dynamic-require
     });
   });
 });
@@ -29,15 +24,9 @@ describe('deprecated rules', () => {
       const inDeprecatedRules = Boolean(plugin.deprecatedRules[ruleName]);
       const isDeprecated = plugin.rules[ruleName].meta.deprecated;
       if (inDeprecatedRules) {
-        assert(
-          isDeprecated,
-          `${ruleName} metadata should mark it as deprecated`
-        );
+        assert(isDeprecated, `${ruleName} metadata should mark it as deprecated`);
       } else {
-        assert(
-          !isDeprecated,
-          `${ruleName} metadata should not mark it as deprecated`
-        );
+        assert(!isDeprecated, `${ruleName} metadata should not mark it as deprecated`);
       }
     });
   });

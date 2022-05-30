@@ -8,11 +8,9 @@ Work in progress...
 🔧: Fixable with [`eslint --fix`](https://eslint.org/docs/user-guide/command-line-interface#fixing-problems).
 
 <!-- AUTO-GENERATED-CONTENT:START (BASIC_RULES) -->
-
-|  ✔  | 🔧  | Rule                                                                                     | Description                                                               |
-| :-: | :-: | :--------------------------------------------------------------------------------------- | :------------------------------------------------------------------------ |
-|  ✔  | 🔧  | [avensia/require-comment-for-hook-ignore](docs/rules/require-comment-for-hook-ignore.md) | Prevent ignoring exhaustive-deps or rules-of-hooks without describing why |
-
+| ✔ | 🔧 | Rule | Description |
+| :---: | :---: | :--- | :--- |
+| ✔ | 🔧 | [avensia/require-comment-for-hook-ignore](docs/rules/require-comment-for-hook-ignore.md) | Prevent ignoring exhaustive-deps or rules-of-hooks without describing why |
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 ## Rules documentation

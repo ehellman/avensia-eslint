@@ -7,9 +7,7 @@ const allRules = {
 /* eslint-enable */
 
 function filterRules(rules, predicate) {
-  return Object.fromEntries(
-    Object.entries(rules).filter((entry) => predicate(entry[1]))
-  );
+  return Object.fromEntries(Object.entries(rules).filter((entry) => predicate(entry[1])));
 }
 
 const deprecatedRules = filterRules(allRules, (rule) => rule.meta.deprecated);

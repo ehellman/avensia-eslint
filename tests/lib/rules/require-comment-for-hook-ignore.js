@@ -1,6 +1,6 @@
 /**
- * @fileoverview Forbid "button" element without an explicit "type" attribute
- * @author Filipp Riabchun
+ * @fileoverview Prevent ignoring exhaustive-deps or rules-of-hooks without describing why
+ * @author Erik Hellman
  */
 
 'use strict';

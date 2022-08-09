@@ -1,5 +1,5 @@
 {
-  "name": "@avensia-oss/eslint",
+  "name": "avensia-eslint",
   "version": "0.1.0",
   "author": "Erik Hellman <erik.hellman@avensia.com>",
   "description": "Avensia's suite of custom ESLint rules",

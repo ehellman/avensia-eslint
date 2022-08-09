@@ -1,6 +1,6 @@
 {
-  "name": "avensia-eslint",
-  "version": "0.1.0",
+  "name": "eslint-plugin-avensia",
+  "version": "0.0.0",
   "author": "Erik Hellman <erik.hellman@avensia.com>",
   "description": "Avensia's suite of custom ESLint rules",
   "main": "index.js",

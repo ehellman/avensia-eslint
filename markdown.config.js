@@ -17,7 +17,7 @@ const buildRulesTable = (rows) => {
   return [header, separator, ...rows].map((row) => `| ${row} |`).join('\n');
 };
 
-const BASIC_RULES = () => buildRulesTable(ruleTableRows.filter((rule) => !rule.includes('react/jsx-')));
+const BASIC_RULES = () => buildRulesTable(ruleTableRows.filter((rule) => rule.includes('avensia/')));
 /*
  * if you want to separate rules, create a new variable here to filter through the list
  * and then add it to `transforms` under exports

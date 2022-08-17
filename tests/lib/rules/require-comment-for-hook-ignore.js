@@ -13,7 +13,7 @@ const RuleTester = require('eslint').RuleTester;
 const rule = require('../../../lib/rules/require-comment-for-hook-ignore');
 
 const parserOptions = {
-  ecmaVersion: 2015, // or 2018?
+  ecmaVersion: 2015,
   sourceType: 'module',
 };
 

@@ -19,7 +19,7 @@ See [`eslint` documentation](https://eslint.org/docs/developer-guide/working-wit
 
 ## CONTRIBUTING
 
-An important note about contributing right now is that there is a problem in the `markdown-magic` package which is currently at `2.6.0`. It has a dependency called `@technote-space/doctoc` that completely removed the possiblity to use `require()` and instead wants `import()`. The package has not been properly updated yet, so if you want to run the `npm run generate-list-of-rules` command, you have to open `node_modules\markdown-magic\lib\transforms\toc.js` and change: https://github.com/DavidWells/markdown-magic/issues/62 and https://github.com/DavidWells/markdown-magic/pull/64 and perhaps https://github.com/DavidWells/markdown-magic/pull/63
+An important note about contributing right now is that there is a problem in the `markdown-magic` package which is currently at `2.6.0`. It has a dependency called `@technote-space/doctoc` that completely removed the possiblity to use `require()` and instead wants `import()`. The package has not been properly updated yet, so if you want to run the `npm run generate-list-of-rules` command, you have to open `node_modules\markdown-magic\lib\transforms\toc.js` and change: 
 
 ```js
 // this
@@ -28,7 +28,7 @@ const { transform } = require('@technote-space/doctoc')
 const { transform } = import('@technote-space/doctoc')
 ```
 
-And you should now be able to properly update README.md with your new rules. Follow these topics for updates on the topic: https://github.com/DavidWells/markdown-magic/issues/62
+And you should now be able to properly update README.md with your new rules. Once `markdown-magic` pins a non-broken version of `@technote-space/doctoc` things should work great again. So `^2.6.1` hopefully. (See versions here: https://www.npmjs.com/package/markdown-magic?activeTab=versions)
 
 # License
 
